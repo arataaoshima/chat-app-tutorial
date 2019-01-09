@@ -5,9 +5,10 @@ test:
   adapter: async
 
 production:
-  adapter: redis
-  url: redis://redistogo:33dd80b2f4777d40ff351572066aa7a4@crestfish.redistogo.com:9504/
+   adapter: async
+ # adapter: redis
+  #url: redis://redistogo:33dd80b2f4777d40ff351572066aa7a4@crestfish.redistogo.com:9504/
   #url: redis://h:p53e1258df8ec924ae1abad43d9c1110a90616b4dc97d41f5ee1dc22243285923@ec2-54-158-129-107.compute-1.amazonaws.com:49519
   #url: <%= ENV.fetch("REDIS_URL") { "redis://redistogo:33dd80b2f4777d40ff351572066aa7a4@crestfish.redistogo.com:9504/" } %>
   
-  channel_prefix: message_me_production
+  #channel_prefix: message_me_production
