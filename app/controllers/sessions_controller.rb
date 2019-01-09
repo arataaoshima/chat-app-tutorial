@@ -7,6 +7,17 @@ class SessionsController < ApplicationController
   def new
   end
   
+  def signup
+  end
+  
+  def user_create
+    @user = User.new
+    @user.username = params[:username]
+    @user.password = params[:password]
+    @user.save
+    redirect_to login_path
+  end
+  
   def create
       @user = User.find_by(username: params[:session][:username])
       
